@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HCJK Collection • Poetry & Words</title>
+    <meta name="description" content="Discover heartfelt poetry and prose from HCJK Collection. Explore verses that touch the soul and speak to the human experience.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📝</text></svg>">
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <h1>HCJK</h1>
+                <p class="tagline">Collection</p>
+            </div>
+            <p class="subtitle">poetry • prose • reflections</p>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Words that touch the soul</h2>
+                <p class="hero-description">
+                    Exploring the depths of human emotion through carefully crafted verses. 
+                    Each poem is a journey through heartache, hope, healing, and the beauty of being human.
+                </p>
+            </div>
+        </section>
+
+        <!-- Featured Poem -->
+        <section class="featured-poem">
+            <div class="poem-header">
+                <span class="poem-label">featured poem</span>
+                <h3>Finding Comfort in Silence</h3>
+            </div>
+            <div class="poem-content">
+                <p>In the quiet moments between breaths,<br>
+                Where thoughts soften and hearts mend,<br>
+                There exists a sacred space<br>
+                Where peace becomes your friend.</p>
+                
+                <p>Silence speaks the loudest truths,<br>
+                When noise can no longer stay,<br>
+                It teaches us to listen<br>
+                To what our hearts need to say.</p>
+            </div>
+            <div class="poem-actions">
+                <button class="poem-button">read full collection</button>
+            </div>
+        </section>
+
+        <!-- Links Section -->
+        <section class="links">
+            <div class="link-item">
+                <a href="#" class="link-button primary">
+                    <span class="link-icon">📚</span>
+                    <div class="link-content">
+                        <span class="link-title">Poetry Collections</span>
+                        <span class="link-description">Explore complete series of themed poems</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="link-item">
+                <a href="https://www.instagram.com/hcjk_collection/" target="_blank" class="link-button">
+                    <span class="link-icon">📸</span>
+                    <div class="link-content">
+                        <span class="link-title">Instagram</span>
+                        <span class="link-description">Daily poems & behind-the-scenes</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="link-item">
+                <a href="#" class="link-button">
+                    <span class="link-icon">💌</span>
+                    <div class="link-content">
+                        <span class="link-title">Newsletter</span>
+                        <span class="link-description">Weekly poetry delivered to your inbox</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="link-item">
+                <a href="#" class="link-button">
+                    <span class="link-icon">🎭</span>
+                    <div class="link-content">
+                        <span class="link-title">Live Readings</span>
+                        <span class="link-description">Join virtual poetry sessions</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="link-item">
+                <a href="#" class="link-button">
+                    <span class="link-icon">✍️</span>
+                    <div class="link-content">
+                        <span class="link-title">Commission a Poem</span>
+                        <span class="link-description">Personalized verses for special moments</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="link-item">
+                <a href="#" class="link-button">
+                    <span class="link-icon">🤝</span>
+                    <div class="link-content">
+                        <span class="link-title">Collaborate</span>
+                        <span class="link-description">Work together on creative projects</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats">
+            <div class="stat-item">
+                <span class="stat-number">150+</span>
+                <span class="stat-label">poems written</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">12k</span>
+                <span class="stat-label">readers reached</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">8</span>
+                <span class="stat-label">collections published</span>
+            </div>
+        </section>
+
+        <!-- Connect Section -->
+        <section class="connect">
+            <h3>Connect</h3>
+            <div class="social-links">
+                <a href="https://www.instagram.com/hcjk_collection/" target="_blank" class="social-link">
+                    <span class="social-icon">📷</span>
+                    <span class="social-name">Instagram</span>
+                    <span class="social-desc">Daily poetry & updates</span>
+                </a>
+                <a href="#" class="social-link">
+                    <span class="social-icon">📧</span>
+                    <span class="social-name">Email</span>
+                    <span class="social-desc">Inquiries & collaborations</span>
+                </a>
+                <a href="#" class="social-link">
+                    <span class="social-icon">📝</span>
+                    <span class="social-name">Blog</span>
+                    <span class="social-desc">Writing process & reflections</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2024 HCJK Collection</p>
+            <div class="footer-links">
+                <a href="#">Privacy</a>
+                <span>•</span>
+                <a href="#">Terms</a>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" id="themeToggle">
+        <span class="theme-icon">🌙</span>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

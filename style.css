@@ -6,19 +6,20 @@
 }
 
 :root {
-    /* Light Theme */
-    --bg-primary: #ffffff;
-    --bg-secondary: #fafafa;
-    --bg-accent: #f5f5f5;
-    --text-primary: #2c2c2c;
-    --text-secondary: #666666;
-    --text-muted: #999999;
-    --accent-color: #8b7355;
-    --accent-hover: #6d5940;
-    --border-color: #e0e0e0;
-    --shadow-light: rgba(0, 0, 0, 0.08);
-    --shadow-medium: rgba(0, 0, 0, 0.12);
-    --shadow-dark: rgba(0, 0, 0, 0.16);
+    /* Light Theme - Warm Earth Tones */
+    --bg-primary: #FFF8F0;
+    --bg-secondary: #F5E6D3;
+    --bg-accent: #EDD9C3;
+    --text-primary: #4A3C28;
+    --text-secondary: #6B5D54;
+    --text-muted: #8A7D75;
+    --accent-color: #8B7355;
+    --accent-hover: #A0826D;
+    --accent-light: #D4A574;
+    --border-color: #D4C4B0;
+    --shadow-light: rgba(139, 115, 85, 0.08);
+    --shadow-medium: rgba(139, 115, 85, 0.12);
+    --shadow-dark: rgba(139, 115, 85, 0.16);
     
     /* Typography */
     --font-serif: 'Crimson Text', Georgia, serif;
@@ -43,20 +44,21 @@
     --transition-slow: 0.5s ease;
 }
 
-/* Dark Theme */
+/* Dark Theme - Warm Earth Dark Mode */
 [data-theme="dark"] {
-    --bg-primary: #1a1a1a;
-    --bg-secondary: #2a2a2a;
-    --bg-accent: #333333;
-    --text-primary: #e0e0e0;
-    --text-secondary: #b0b0b0;
-    --text-muted: #808080;
-    --accent-color: #a08060;
-    --accent-hover: #c0a080;
-    --border-color: #404040;
-    --shadow-light: rgba(0, 0, 0, 0.3);
-    --shadow-medium: rgba(0, 0, 0, 0.4);
-    --shadow-dark: rgba(0, 0, 0, 0.5);
+    --bg-primary: #2A2318;
+    --bg-secondary: #3D3428;
+    --bg-accent: #4A3F32;
+    --text-primary: #E8DDD0;
+    --text-secondary: #C8B8A8;
+    --text-muted: #A89685;
+    --accent-color: #D4A574;
+    --accent-hover: #E5B888;
+    --accent-light: #F0D4A6;
+    --border-color: #5A4F42;
+    --shadow-light: rgba(42, 35, 24, 0.3);
+    --shadow-medium: rgba(42, 35, 24, 0.4);
+    --shadow-dark: rgba(42, 35, 24, 0.5);
 }
 
 /* Base Styles */
@@ -136,6 +138,215 @@ body {
     color: var(--text-secondary);
     max-width: 500px;
     margin: 0 auto;
+}
+
+/* Search Section */
+.search-section {
+    margin-bottom: var(--space-xl);
+}
+
+.search-container {
+    text-align: center;
+}
+
+.search-container h3 {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    margin-bottom: var(--space-lg);
+}
+
+.search-box {
+    position: relative;
+    max-width: 500px;
+    margin: 0 auto var(--space-lg);
+}
+
+.search-icon {
+    position: absolute;
+    left: var(--space-md);
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+    z-index: 1;
+}
+
+#poemSearch {
+    width: 100%;
+    padding: var(--space-md) var(--space-md) var(--space-md) 3rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    font-size: 1rem;
+    transition: all var(--transition-fast);
+}
+
+#poemSearch:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    background: var(--bg-primary);
+    box-shadow: 0 0 0 3px rgba(139, 115, 85, 0.1);
+}
+
+.clear-search {
+    position: absolute;
+    right: var(--space-md);
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+    font-size: 1.25rem;
+    padding: var(--space-xs);
+    border-radius: 50%;
+    transition: all var(--transition-fast);
+}
+
+.clear-search:hover {
+    background: var(--bg-accent);
+    color: var(--text-primary);
+}
+
+.search-results {
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.results-header {
+    margin-bottom: var(--space-md);
+    padding-bottom: var(--space-sm);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.results-count {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+}
+
+.results-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.search-result-item {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: var(--space-lg);
+    transition: all var(--transition-fast);
+}
+
+.search-result-item:hover {
+    border-color: var(--accent-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px var(--shadow-light);
+}
+
+.result-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--space-sm);
+}
+
+.result-title {
+    font-family: var(--font-serif);
+    font-size: 1.125rem;
+    color: var(--text-primary);
+    margin: 0;
+    line-height: 1.3;
+}
+
+.result-title mark {
+    background: var(--accent-light);
+    color: var(--text-primary);
+    padding: 1px 2px;
+    border-radius: 2px;
+}
+
+.result-tags {
+    display: flex;
+    gap: var(--space-xs);
+    flex-shrink: 0;
+    margin-left: var(--space-sm);
+}
+
+.result-tag {
+    font-size: 0.75rem;
+    padding: 2px var(--space-xs);
+    border-radius: var(--radius-sm);
+    text-transform: lowercase;
+    font-weight: 500;
+}
+
+.result-tag.theme {
+    background: var(--accent-color);
+    color: white;
+}
+
+.result-tag.mood {
+    background: var(--bg-accent);
+    color: var(--text-secondary);
+}
+
+.result-tag.season {
+    background: var(--bg-primary);
+    color: var(--text-muted);
+    border: 1px solid var(--border-color);
+}
+
+.result-content {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin-bottom: var(--space-md);
+    max-height: 3em;
+    overflow: hidden;
+    position: relative;
+}
+
+.result-content mark {
+    background: var(--accent-light);
+    color: var(--text-primary);
+    padding: 1px 2px;
+    border-radius: 2px;
+}
+
+.view-poem-btn {
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    padding: var(--space-xs) var(--space-md);
+    border-radius: var(--radius-sm);
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.view-poem-btn:hover {
+    background: var(--accent-hover);
+    transform: translateY(-1px);
+}
+
+.no-results {
+    text-align: center;
+    padding: var(--space-xl);
+    color: var(--text-secondary);
+}
+
+.no-results p:first-child {
+    font-size: 1.125rem;
+    margin-bottom: var(--space-sm);
+    color: var(--text-primary);
+}
+
+.no-results p:last-child {
+    font-size: 0.875rem;
+    color: var(--text-muted);
 }
 
 /* Featured Poem */
@@ -293,6 +504,150 @@ body {
 }
 
 /* Stats Section */
+/* Collections Section */
+.collections {
+    margin-bottom: var(--space-xl);
+}
+
+.section-title {
+    font-family: var(--font-serif);
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    text-align: center;
+    margin-bottom: var(--space-lg);
+}
+
+.collection-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-md);
+    margin-bottom: var(--space-xl);
+}
+
+.collection-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+    transition: all var(--transition-medium);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.collection-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px var(--shadow-medium);
+    border-color: var(--accent-color);
+}
+
+.collection-card.featured {
+    background: var(--accent-color);
+    color: white;
+    border-color: var(--accent-color);
+}
+
+.collection-card.featured .collection-title,
+.collection-card.featured .collection-description,
+.collection-card.featured .poem-count,
+.collection-card.featured .collection-theme {
+    color: white;
+}
+
+.collection-cover {
+    width: 60px;
+    height: 60px;
+    background: var(--bg-accent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--space-md);
+    color: var(--accent-color);
+}
+
+.collection-card.featured .collection-cover {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.collection-title {
+    font-family: var(--font-serif);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: var(--space-sm);
+    line-height: 1.3;
+}
+
+.collection-description {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin-bottom: var(--space-md);
+}
+
+.collection-stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.75rem;
+}
+
+.poem-count {
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+.collection-theme {
+    color: var(--text-muted);
+    background: var(--bg-accent);
+    padding: 2px var(--space-xs);
+    border-radius: var(--radius-sm);
+}
+
+/* Filter Controls */
+.filter-controls {
+    text-align: center;
+    padding: var(--space-lg) 0;
+    border-top: 1px solid var(--border-color);
+}
+
+.filter-controls h4 {
+    font-family: var(--font-serif);
+    font-size: 1.125rem;
+    color: var(--text-primary);
+    margin-bottom: var(--space-md);
+}
+
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    justify-content: center;
+}
+
+.filter-btn {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: var(--radius-sm);
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--accent-color);
+    color: white;
+    border-color: var(--accent-color);
+    transform: translateY(-1px);
+}
+
+/* Stats Section */
 .stats {
     display: flex;
     justify-content: space-around;
@@ -319,6 +674,120 @@ body {
     color: var(--text-muted);
     text-transform: lowercase;
     letter-spacing: 0.5px;
+}
+
+/* About Section */
+.about {
+    background: var(--bg-accent);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    margin-bottom: var(--space-xl);
+    border: 1px solid var(--border-color);
+}
+
+.about-header {
+    text-align: center;
+    margin-bottom: var(--space-lg);
+}
+
+.author-photo {
+    margin-bottom: var(--space-md);
+}
+
+.about-title {
+    font-family: var(--font-serif);
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: var(--space-sm);
+}
+
+.about-subtitle {
+    font-style: italic;
+    color: var(--text-secondary);
+    font-size: 1rem;
+    margin-bottom: var(--space-lg);
+}
+
+.about-content {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.about-bio {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: var(--space-lg);
+    font-size: 1rem;
+}
+
+.about-achievements {
+    margin-bottom: var(--space-lg);
+}
+
+.about-achievements h4 {
+    font-family: var(--font-serif);
+    font-size: 1.125rem;
+    color: var(--text-primary);
+    margin-bottom: var(--space-md);
+    text-align: center;
+}
+
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-sm);
+}
+
+.achievement-item {
+    display: flex;
+    align-items: center;
+    background: var(--bg-secondary);
+    padding: var(--space-sm);
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-color);
+}
+
+.achievement-icon {
+    color: var(--accent-color);
+    margin-right: var(--space-sm);
+    flex-shrink: 0;
+}
+
+.achievement-item span {
+    font-size: 0.875rem;
+    color: var(--text-primary);
+}
+
+.about-testimonials {
+    text-align: center;
+}
+
+.about-testimonials h4 {
+    font-family: var(--font-serif);
+    font-size: 1.125rem;
+    color: var(--text-primary);
+    margin-bottom: var(--space-md);
+}
+
+.testimonial {
+    background: var(--bg-secondary);
+    padding: var(--space-lg);
+    border-radius: var(--radius-md);
+    border-left: 4px solid var(--accent-color);
+    font-style: italic;
+}
+
+.testimonial-text {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: var(--space-sm);
+}
+
+.testimonial-author {
+    color: var(--text-muted);
+    font-size: 0.875rem;
+    font-style: normal;
 }
 
 /* Connect Section */
@@ -395,6 +864,27 @@ body {
     font-size: 0.875rem;
     color: var(--text-muted);
     margin-bottom: var(--space-xs);
+}
+
+.footer-branding {
+    margin: var(--space-sm) 0;
+}
+
+.collective-badge {
+    font-size: 0.75rem;
+    color: var(--accent-color);
+    background: var(--bg-accent);
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-color);
+    display: inline-block;
+    transition: all var(--transition-fast);
+}
+
+.collective-badge:hover {
+    background: var(--accent-color);
+    color: white;
+    transform: translateY(-1px);
 }
 
 .footer-links {
@@ -500,7 +990,7 @@ body {
     }
 }
 
-/* Animation Classes */
+/* Enhanced Animation Classes */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -509,6 +999,46 @@ body {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
     }
 }
 
